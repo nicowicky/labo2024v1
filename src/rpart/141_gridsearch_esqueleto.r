@@ -114,10 +114,10 @@ library(data.table)
 # Asumiendo que tb_grid_search es un data.table donde guardarás los resultados
 tb_grid_search <- data.table(max_depth=integer(), min_split=integer(), cp=numeric(), minbucket=integer(), ganancia_promedio=numeric())
 contador = 0
-for (vmax_depth in c(7,9,11)) {
-  for (vmin_split in c(300,500,700,900,1100, 1300)) {
-    for (vcp in c(-0.8,  -0.3)) {
-      for (vminbucket in c(200,300,400,500)) {
+for (vmax_depth in c(7,8,9,10,11)) {
+  for (vmin_split in c(1000, 1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200,2300,2400,2500)) {
+    for (vcp in c(-1,-0.8,-0.6,-0.4,-0.2)) {
+      for (vminbucket in c(400, 500, 600, 700,800,900, 1000,1100,1200,1300,1400)) {
         contador = contador + 1
         print(contador)
         # Configuración de los parámetros básicos, incluyendo los nuevos parámetros
