@@ -21,10 +21,10 @@ PARAM$experimento <- "CA5050"
 
 # copio si hace falta el dataset
 
-setwd("~/buckets/b1/")
+setwd("D:\\MAESTRIA AUSTRAL DATA SCIENCE\\MATERIAS\\2doSem\\Laboratorio 1\\datasets") # Establezco el Working Directory
 
 # cargo el dataset
-dataset <- fread(PARAM$dataset) # donde entreno
+dataset <- fread("dataset_pequeno.csv")
 
 
 # creo la carpeta donde va el experimento
